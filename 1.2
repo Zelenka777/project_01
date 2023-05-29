@@ -1,0 +1,260 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyNzU4qCIWzGoWrk5j0KezEd",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Zelenka777/project_01/blob/main/1.2\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "\n",
+        "#пункт А\n",
+        "import random\n",
+        "\n",
+        "my_favorite_songs = [\n",
+        "    ['Waste a Moment', 3.03],\n",
+        "    ['New Salvation', 4.02],\n",
+        "    ['Staying\\' Alive', 3.40],\n",
+        "    ['Out of Touch', 3.03],\n",
+        "    ['A Sorta Fairytale', 5.28],\n",
+        "    ['Easy', 4.15],\n",
+        "    ['Beautiful Day', 4.04],\n",
+        "    ['Nowhere to Run', 2.58],\n",
+        "    ['In This World', 4.02],\n",
+        "]\n",
+        "three_songs = random.sample(my_favorite_songs, 3)\n",
+        "\n",
+        "all_time = (three_songs[0][1] + three_songs [1][1] + three_songs [2][1])\n",
+        "all_time_str = str(datetime.timedelta(minutes=all_time))\n",
+        "\n",
+        "\n",
+        "print('Три песни звучат', all_time_str, \"минут\")\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "05Hzvi2A3nI2",
+        "outputId": "80ac6f96-9cf2-499d-9a81-ac54c2919580"
+      },
+      "execution_count": 125,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Три песни звучат 0:10:53.400000 минут\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#пункт В\n",
+        "import random\n",
+        "\n",
+        "my_favorite_songs_dict = { \n",
+        "    'Waste a Moment': 3.03, \n",
+        "    'New Salvation': 4.02, \n",
+        "    'Staying\\ Alive': 3.40, \n",
+        "    'Out of Touch': 3.03, \n",
+        "    'A Sorta Fairytale': 5.28, \n",
+        "    'Easy': 4.15, \n",
+        "    'Beautiful Day': 4.04, \n",
+        "    'Nowhere to Run': 2.58, \n",
+        "    'In This World': 4.02, \n",
+        "    }\n",
+        "\n",
+        "three_songs_dict= dict(random.sample(my_favorite_songs_dict.items(),3))\n",
+        "print(three_songs)\n",
+        "all_time = sum(three_songs_dist.values())\n",
+        "all_time_str= str(datetime.timedelta(minutes=all_time))\n",
+        "\n",
+        "print(\"Три песни звучат\", all_time_str, \"минут\" )\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "ayfANQAzeoQn",
+        "outputId": "c062804e-cfef-4a62-b7b9-e46ce17fcb05"
+      },
+      "execution_count": 148,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[['Out of Touch', 3.03], ['Nowhere to Run', 2.58], ['In This World', 4.02]]\n",
+            "Три песни звучат 0:09:00.600000 минут\n"
+          ]
+        },
+        {
+          "output_type": "stream",
+          "name": "stderr",
+          "text": [
+            "<ipython-input-148-a403415395af>:16: DeprecationWarning: Sampling from a set deprecated\n",
+            "since Python 3.9 and will be removed in a subsequent version.\n",
+            "  three_songs_dict= dict(random.sample(my_favorite_songs_dict.items(),3))\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#пункт С\n",
+        "\n",
+        "import random\n",
+        "\n",
+        "my_favorite_songs = [\n",
+        "    ['Waste a Moment', 3.03],\n",
+        "    ['New Salvation', 4.02],\n",
+        "    ['Staying\\' Alive', 3.40],\n",
+        "    ['Out of Touch', 3.03],\n",
+        "    ['A Sorta Fairytale', 5.28],\n",
+        "    ['Easy', 4.15],\n",
+        "    ['Beautiful Day', 4.04],\n",
+        "    ['Nowhere to Run', 2.58],\n",
+        "    ['In This World', 4.02],\n",
+        "]\n",
+        "three_songs = random.sample(my_favorite_songs, 3)\n",
+        "print(three_songs)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "iy8OR_r4myOV",
+        "outputId": "96c623fc-cb8c-46bc-f040-4415a5ca3e37"
+      },
+      "execution_count": 146,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[['Out of Touch', 3.03], ['Nowhere to Run', 2.58], ['In This World', 4.02]]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#пункт  D\n",
+        "\n",
+        "time_str = \"3:21\" # пример строки с временем в формате минуты:секунды\n",
+        "time_delta = datetime.datetime.strptime(time_str, \"%M:%S\") - datetime.datetime(1900, 1, 1)\n",
+        "time_in_seconds = time_delta.total_seconds()\n",
+        "print(f\"Время в секундах: {time_in_seconds}\")\n",
+        "time_in_minutes = time_in_seconds / 60\n",
+        "time_in_minutes_str = str(datetime.timedelta(minutes=time_in_minutes))\n",
+        "print(f\"Время в формате ММ:СС: {time_in_minutes_str}\")\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "miiwp3hvn5N3",
+        "outputId": "87e68dae-7dac-4099-fa32-b6505c296365"
+      },
+      "execution_count": 147,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Время в секундах: 201.0\n",
+            "Время в формате ММ:СС: 0:03:21\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# Задача 1.2.\n",
+        "\n",
+        "# Пункт A. \n",
+        "# Приведем плейлист песен в виде списка списков\n",
+        "# Список my_favorite_songs содержит список названий и длительности каждого трека\n",
+        "# Выведите общее время звучания трех случайных песен в формате\n",
+        "# Три песни звучат ХХХ минут\n",
+        "\n",
+        "my_favorite_songs = [\n",
+        "    ['Waste a Moment', 3.03],\n",
+        "    ['New Salvation', 4.02],\n",
+        "    ['Staying\\' Alive', 3.40],\n",
+        "    ['Out of Touch', 3.03],\n",
+        "    ['A Sorta Fairytale', 5.28],\n",
+        "    ['Easy', 4.15],\n",
+        "    ['Beautiful Day', 4.04],\n",
+        "    ['Nowhere to Run', 2.58],\n",
+        "    ['In This World', 4.02],\n",
+        "]\n",
+        "\n",
+        "# Пункт B. \n",
+        "# Есть словарь песен \n",
+        "# Распечатайте общее время звучания трех случайных песен\n",
+        "# Вывод: Три песни звучат ХХХ минут.\n",
+        "\n",
+        "my_favorite_songs_dict = {\n",
+        "    'Waste a Moment': 3.03,\n",
+        "    'New Salvation': 4.02,\n",
+        "    'Staying\\' Alive': 3.40,\n",
+        "    'Out of Touch': 3.03,\n",
+        "    'A Sorta Fairytale': 5.28,\n",
+        "    'Easy': 4.15,\n",
+        "    'Beautiful Day': 4.04,\n",
+        "    'Nowhere to Run': 2.58,\n",
+        "    'In This World': 4.02,\n",
+        "}\n",
+        "\n",
+        "# Дополнительно для пунктов A и B\n",
+        "# Пункт C.\n",
+        "# Сгенерируйте случайные песни с помощью модуля random\n",
+        "# import random\n",
+        "\n",
+        "# Дополнительно \n",
+        "# Пункт D.\n",
+        "# Переведите минуты и секунды в формат времени. Используйте модуль datetime "
+      ],
+      "metadata": {
+        "id": "j7zNvJFKCK7q"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "ywQP4T9an25G"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
